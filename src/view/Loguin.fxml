@@ -9,10 +9,9 @@
 <?import javafx.scene.layout.HBox?>
 <?import javafx.scene.layout.RowConstraints?>
 
-
-<AnchorPane id="AnchorPane" prefHeight="400.0" prefWidth="600.0" xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/11.0.1">
+<AnchorPane id="AnchorPane" prefHeight="400.0" prefWidth="514.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1">
    <children>
-      <GridPane layoutX="191.0" layoutY="139.0" prefHeight="90.0" prefWidth="213.0">
+      <GridPane layoutX="122.0" layoutY="139.0" prefHeight="90.0" prefWidth="287.0">
         <columnConstraints>
           <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
         </columnConstraints>
@@ -26,8 +25,8 @@
             <PasswordField fx:id="txSenha" promptText="senha" GridPane.rowIndex="1" />
             <HBox prefHeight="100.0" prefWidth="200.0" spacing="80.0" GridPane.rowIndex="2">
                <children>
-                  <Button fx:id="btEntrar" mnemonicParsing="false" prefHeight="25.0" prefWidth="104.0" text="Entrar" />
-                  <Button fx:id="btSair" mnemonicParsing="false" prefHeight="25.0" prefWidth="110.0" text="Sair" />
+                  <Button fx:id="btEntrar" mnemonicParsing="false" prefHeight="25.0" prefWidth="104.0" style="-fx-background-color: #1d8dd3;" text="Entrar" textFill="WHITE" />
+                  <Button fx:id="btSair" mnemonicParsing="false" prefHeight="25.0" prefWidth="110.0" style="-fx-background-color: #1d8dd3;" text="Sair" textFill="#fffdfd" />
                </children>
             </HBox>
          </children>
