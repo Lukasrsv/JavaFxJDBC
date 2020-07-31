@@ -13,7 +13,7 @@ package model;
 
 public class Pessoa {
     
-    private long id;
+    private String id;
     private String nome;
     private String email;
     private String senha;
@@ -23,7 +23,7 @@ public class Pessoa {
     }
     
    
-    public Pessoa(long id, String nome, String email, String senha) {
+    public Pessoa(String id, String nome, String email, String senha) {
         this.id = id;
         this.nome = nome;
         this.email = email;
@@ -34,7 +34,7 @@ public class Pessoa {
     
     
     
-    public long getId() {
+    public String getId() {
         return id;
     }
 
@@ -50,7 +50,7 @@ public class Pessoa {
         return senha;
     }
 
-    public void setId(long id) {
+    public void setId(String id) {
         this.id = id;
     }
 
@@ -64,6 +64,12 @@ public class Pessoa {
 
     public void setSenha(String senha) {
         this.senha = senha;
+    }
+
+    @Override
+    public String toString() {
+        return "id: " + id + "\n nome: " + nome + "\n email: " + email + "\n senha: " + senha+"\n-------------------------------------\n";
+        
     }
     
     

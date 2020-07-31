@@ -10,6 +10,8 @@ import java.sql.Connection;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
+import java.util.ArrayList;
+import java.util.List;
 import java.util.logging.Level;
 import java.util.logging.Logger;
 import model.Pessoa;
@@ -43,15 +45,21 @@ public class NewMainTeste {
         }
         */
       
+       
         Pessoa pessoa = new Pessoa();
-        pessoa.setNome("Lucas");
+        pessoa.setId("02433631092");
+        pessoa.setNome("Lukas");
         pessoa.setEmail("Lukas-001");
         pessoa.setSenha("112233");
-        PessoaDaoJDBC pessoaDaoJdbc = new PessoaDaoJDBC();
-        pessoaDaoJdbc.adicionar(pessoa);
-       
-        
-        
+       // PessoaDaoJDBC pessoaDaoJdbc = new PessoaDaoJDBC();
+       // pessoaDaoJdbc.adicionar(pessoa);
+      
+       // pessoaDaoJdbc.Atualizar(pessoa);
+       //pessoaDaoJdbc.Delete(pessoa);
+       PessoaDaoJDBC pessoaDaoJdbc1 = new PessoaDaoJDBC();
+       List <Pessoa> lista = new ArrayList();
+       lista = pessoaDaoJdbc1.Buscar();
+       System.out.println(lista.toString());
     }
 
 }
