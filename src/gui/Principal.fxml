@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Menu?>
+<?import javafx.scene.control.MenuBar?>
+<?import javafx.scene.control.MenuItem?>
+<?import javafx.scene.layout.AnchorPane?>
+
+
+<AnchorPane id="AnchorPane" prefHeight="400.0" prefWidth="600.0" xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/11.0.1" fx:controller="gui.PrincipalController">
+   <children>
+      <MenuBar fx:id="menuBarraPrincipal" layoutY="2.0" prefHeight="25.0" prefWidth="610.0">
+        <menus>
+          <Menu fx:id="menuCadastrarPessoa" mnemonicParsing="false" text=" Pessoa">
+            <items>
+              <MenuItem fx:id="menuItenCadastrarPessoa" mnemonicParsing="false" text="Cadastrar Pessoa" />
+                  <MenuItem fx:id="menuItenListarPessoa" mnemonicParsing="false" text="Listar Pessoa" />
+            </items>
+          </Menu>
+          <Menu fx:id="menuCadastrarEmpresa" mnemonicParsing="false" text=" Empresa">
+            <items>
+              <MenuItem fx:id="menuItenCadastrarEmpresa" mnemonicParsing="false" text="Cadastrar Empresa" />
+                  
+            </items>
+          </Menu>
+        </menus>
+      </MenuBar>
+   </children>
+</AnchorPane>

@@ -1,9 +1,11 @@
+package gui;
+
 /*
  * To change this license header, choose License Headers in Project Properties.
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package Controller;
+
 
 import java.net.URL;
 import java.util.ResourceBundle;
@@ -12,13 +14,18 @@ import javafx.fxml.Initializable;
 import javafx.scene.control.Button;
 import javafx.scene.control.PasswordField;
 import javafx.scene.control.TextField;
-import javafx.scene.input.MouseEvent;
 
 /**
+ * FXML Controller class
  *
  * @author lukas
  */
-public class LoguinController implements Initializable{
+public class CadastrarPessoaController implements Initializable {
+     @FXML
+    private TextField txNome;
+
+    @FXML
+    private TextField txCpf;
 
     @FXML
     private TextField txEmail;
@@ -27,28 +34,33 @@ public class LoguinController implements Initializable{
     private PasswordField txSenha;
 
     @FXML
-    private Button btEntrar;
+    private Button btCadastrar;
 
     @FXML
-    private Button btSair;
+    private Button btCancelar;
 
     
     
     
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    /**
+     * Initializes the controller class.
+     */
     @Override
-    public void initialize(URL location, ResourceBundle resources) {
-        btEntrar.setOnMouseClicked((MouseEvent e) -> {
-            
-        
-        });
-       
-        
-        btSair.setOnMouseClicked((MouseEvent e) -> {
-            
-        
-        });
-        
+    public void initialize(URL url, ResourceBundle rb) {
+        // TODO
+    }    
     
-
-    }
 }

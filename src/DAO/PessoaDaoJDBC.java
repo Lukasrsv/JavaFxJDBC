@@ -43,6 +43,7 @@ public class PessoaDaoJDBC {
             System.out.println("Adicionado!");
         } catch (SQLException e) {
             e.getMessage();
+            e.printStackTrace();
             // Alert alert = new Alert (Alert.AlertType.ERROR);
             //  alert.setContentText("Erro na instrução, pessoa não adicionada!");
             // alert.setTitle("ERRO");
@@ -68,6 +69,7 @@ public class PessoaDaoJDBC {
             System.out.println("Atualizado!");
         } catch (SQLException e) {
             e.getMessage();
+            e.printStackTrace();
             System.out.println("CPF não encontrado");
             // Alert alert = new Alert (Alert.AlertType.ERROR);
             //  alert.setContentText("Erro na instrução, pessoa não adicionada!");
@@ -91,6 +93,7 @@ public class PessoaDaoJDBC {
             System.out.println("Deletado!");
         } catch (SQLException e) {
             e.getMessage();
+            e.printStackTrace();
             System.out.println("CPF não encontrado");
             // Alert alert = new Alert (Alert.AlertType.ERROR);
             //  alert.setContentText("Erro na instrução, pessoa não adicionada!");
@@ -125,6 +128,7 @@ public class PessoaDaoJDBC {
             return lista;
         } catch (SQLException e) {
             e.getMessage();
+            e.printStackTrace();
             System.out.println("Não encontrado");
             // Alert alert = new Alert (Alert.AlertType.ERROR);
             //  alert.setContentText("Erro na instrução, pessoa não adicionada!");
