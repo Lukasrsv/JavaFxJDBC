@@ -18,6 +18,7 @@ import javafx.event.ActionEvent;
 import javafx.event.EventType;
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
+import javafx.scene.control.Alert;
 import javafx.scene.control.Button;
 import javafx.scene.control.PasswordField;
 import javafx.scene.control.TextField;
@@ -74,37 +75,37 @@ public class LoguinController implements Initializable {
 
     @FXML
     public void btEntrarAction(ActionEvent event) {
-        PessoaDaoJDBC p = new PessoaDaoJDBC();
-        List<Pessoa> lista = p.Buscar();
-        for (Pessoa a : lista) {
-            
-           if(a.getEmail().equals(txEmail.getText()) && a.getSenha().equals(txSenha.getText())){
-               System.out.println(a);
-               Principal principal = new Principal();
-               try {
-                   principal.start(new Stage());
-                   Loguin.getLoguin().close();
-               } catch (Exception ex) {
-                  ex.printStackTrace();
-               }
-               
-               
-              }
-           } 
-            
+        try {
+            PessoaDaoJDBC p = new PessoaDaoJDBC();
+            List<Pessoa> lista = p.Buscar();
+            for (Pessoa a : lista) {
+
+                if (a.getEmail().equals(txEmail.getText()) && a.getSenha().equals(txSenha.getText())) {
+
+                    Principal principal = new Principal();
+
+                    principal.start(new Stage());
+                    Loguin.getLoguin().close();
+                    break;
+                }
+            }
+
+        } 
+        catch (Exception ex) {
+            Alert alert = new Alert(Alert.AlertType.ERROR);
+            alert.setContentText("Erro Tente Novamente");
+            alert.setTitle("Erro");
         }
 
-    
+    }
 
-
-
-/**
- * Initializes the controller class.
- */
-@Override
-        public void initialize(URL location, ResourceBundle resources) {
-       //TODO
-       /*
+    /**
+     * Initializes the controller class.
+     */
+    @Override
+    public void initialize(URL location, ResourceBundle resources) {
+        //TODO
+        /*
         btEntrar.setOnMouseClicked((MouseEvent e) -> {
             
         
@@ -115,10 +116,8 @@ public class LoguinController implements Initializable {
             
         
         });
-        */
-   
+         */
 
     }
 
 }
-

@@ -7,11 +7,16 @@ package gui;
 
 import java.net.URL;
 import java.util.ResourceBundle;
+import java.util.logging.Level;
+import java.util.logging.Logger;
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
 import javafx.scene.control.Menu;
 import javafx.scene.control.MenuBar;
 import javafx.scene.control.MenuItem;
+import javafx.stage.Stage;
+import javafxbd.CadastrarEmpresa;
+import javafxbd.CadastrarPessoa;
 
 /**
  * FXML Controller class
@@ -36,8 +41,42 @@ public class PrincipalController implements Initializable {
 
     @FXML
     private MenuItem menuItenCadastrarEmpresa;
-
+    
+    @FXML
+    private MenuItem menuItenListarEmpresa;
+    CadastrarPessoa cadastrarPessoa = new CadastrarPessoa();
+    CadastrarEmpresa cadastrarEmpresa = new CadastrarEmpresa();
    
+    public void menuCadastrarPessoaAction(){
+        
+         try {
+             cadastrarPessoa.start(new Stage());
+         } 
+         catch (Exception ex) {
+             
+         }
+    
+    }
+    
+    public void menuCadastrarEmpresaAction(){
+        
+         try {
+             cadastrarEmpresa.start(new Stage());
+         } 
+         catch (Exception ex) {
+             
+         }
+         
+         
+    
+    }
+    
+    
+    
+    
+    
+    
+    
     
     /**
      * Initializes the controller class.

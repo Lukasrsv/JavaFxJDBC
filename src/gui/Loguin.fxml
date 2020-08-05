@@ -22,7 +22,7 @@
         </rowConstraints>
          <children>
             <TextField fx:id="txEmail" text="E-mail" />
-            <PasswordField fx:id="txSenha" promptText="senha" GridPane.rowIndex="1" />
+            <PasswordField fx:id="txSenha" onAction="#btEntrarAction" promptText="senha" GridPane.rowIndex="1" />
             <HBox prefHeight="100.0" prefWidth="200.0" spacing="80.0" GridPane.rowIndex="2">
                <children>
                   <Button fx:id="btEntrar" mnemonicParsing="false" onAction="#btEntrarAction" prefHeight="25.0" prefWidth="104.0" style="-fx-background-color: #1d8dd3;" text="Entrar" textFill="WHITE" />

@@ -23,7 +23,7 @@ public class CadastrarPessoa extends Application{
             Parent parent = FXMLLoader.load(getClass().getResource("/gui/CadastrarPessoa.fxml"));//carrega fxml
             Scene scene = new Scene(parent);//insere fxml em uma cena
             stage.setScene(scene);//insere a cena em uma janela
-            stage.setTitle("Loguin");
+            stage.setTitle("CadastrarPessoa");
             stage.show();//mostra a janela
             setCadastrarPessoa(stage);
     }

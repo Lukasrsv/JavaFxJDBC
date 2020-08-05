@@ -5,22 +5,25 @@
  */
 package model;
 
+import java.util.Objects;
+
 /**
  *
  * @author lukas
  */
 public class Empresa {
-    private String id;
+    
     private String nome;
     private String cnpj;
     private String email;
+    private String senha;
     
     public Empresa(){
     
     }
 
     public Empresa(String id, String nome, String cnpj, String email) {
-        this.id = id;
+        
         this.nome = nome;
         this.cnpj = cnpj;
         this.email = email;
@@ -38,9 +41,7 @@ public class Empresa {
     
    
     
-    public String getId() {
-        return id;
-    }
+    
 
     public String getNome() {
         return nome;
@@ -50,9 +51,7 @@ public class Empresa {
         return cnpj;
     }
 
-    public void setId(String id) {
-        this.id = id;
-    }
+    
 
     public void setNome(String nome) {
         this.nome = nome;
@@ -60,6 +59,51 @@ public class Empresa {
 
     public void setCnpj(String cnpj) {
         this.cnpj = cnpj;
+    }
+
+    public String getSenha() {
+        return senha;
+    }
+
+    public void setSenha(String senha) {
+        this.senha = senha;
+    }
+
+    @Override
+    public int hashCode() {
+        int hash = 7;
+        hash = 71 * hash + Objects.hashCode(this.nome);
+        hash = 71 * hash + Objects.hashCode(this.cnpj);
+        hash = 71 * hash + Objects.hashCode(this.email);
+        hash = 71 * hash + Objects.hashCode(this.senha);
+        return hash;
+    }
+
+    @Override
+    public boolean equals(Object obj) {
+        if (this == obj) {
+            return true;
+        }
+        if (obj == null) {
+            return false;
+        }
+        if (getClass() != obj.getClass()) {
+            return false;
+        }
+        final Empresa other = (Empresa) obj;
+        if (!Objects.equals(this.nome, other.nome)) {
+            return false;
+        }
+        if (!Objects.equals(this.cnpj, other.cnpj)) {
+            return false;
+        }
+        if (!Objects.equals(this.email, other.email)) {
+            return false;
+        }
+        if (!Objects.equals(this.senha, other.senha)) {
+            return false;
+        }
+        return true;
     }
     
     

@@ -24,7 +24,7 @@ public class CadastrarEmpresa extends Application {
             Parent parent = FXMLLoader.load(getClass().getResource("/gui/CadastrarEmpresa.fxml"));//carrega fxml
             Scene scene = new Scene(parent);//insere fxml em uma cena
             stage.setScene(scene);//insere a cena em uma janela
-            stage.setTitle("Loguin");
+            stage.setTitle("CadastrarEmpresa");
             stage.show();//mostra a janela
             setCadastrarEmpresa(stage);
     }
@@ -37,6 +37,9 @@ public class CadastrarEmpresa extends Application {
         this.CadastrarEmpresa = CadastrarEmpresa;
     }
 
+    
+    
+    
     
      /**
      * @param args the command line arguments

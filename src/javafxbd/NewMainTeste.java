@@ -5,6 +5,7 @@
  */
 package javafxbd;
 
+import DAO.EmpresaDaoJDBC;
 import DAO.PessoaDaoJDBC;
 import java.io.IOException;
 import java.sql.Connection;
@@ -16,7 +17,9 @@ import java.util.List;
 import java.util.logging.Level;
 import java.util.logging.Logger;
 import static javafx.application.Application.launch;
+import javafx.scene.control.Alert;
 import javafx.stage.Stage;
+import model.Empresa;
 import model.Pessoa;
 
 /**
@@ -69,9 +72,35 @@ public class NewMainTeste {
        System.out.println(lista.toString());
       */
       
+        EmpresaDaoJDBC busca = new EmpresaDaoJDBC();
+        List<Empresa> lista = new ArrayList<>();
+        lista = busca.Buscar();
+        Empresa empresa = new Empresa();
+        empresa.setCnpj("2");
+        empresa.setEmail("empresa@");
+        empresa.setNome("Stericycle");
+        empresa.setSenha("112233");
+        
+        for (Empresa a : lista) {
+            
+           if (a.getCnpj().equals(empresa.getCnpj()) ) {
+                System.out.println("usuário já existe");
+              
+               Alert alert = new Alert(Alert.AlertType.INFORMATION);
+                alert.setTitle("Alerta");
+                alert.setContentText("Usuário já existe");
+                alert.show();
        
-       
-       
+             }else{
+               EmpresaDaoJDBC p = new EmpresaDaoJDBC();
+               p.adicionar(empresa);
+               CadastrarEmpresa.getCadastrarEmpresa().close();
+           
+           }
+        }
+            
+        
+        
+        
     }
-
 }
