@@ -23,6 +23,7 @@ import javafx.scene.control.TextField;
 import javafxbd.CadastrarEmpresa;
 
 import model.Empresa;
+import util.Alerts;
 
 /**
  * FXML Controller class
@@ -71,10 +72,7 @@ public class CadastrarEmpresaController implements Initializable {
             for (Empresa a : lista) {
 
                 if (a.getCnpj().equals(empresa.getCnpj())) {
-                    Alert alert = new Alert(Alert.AlertType.INFORMATION);
-                    alert.setTitle("Alerta");
-                    alert.setContentText("Usuário já existe");
-                    alert.show();
+                    Alerts.showAlerts("ERRO", null,"Usuário já existe", Alert.AlertType.ERROR);
                     teste++;
                     break;
                 }
@@ -83,15 +81,12 @@ public class CadastrarEmpresaController implements Initializable {
             if (teste == 0) {
                 EmpresaDaoJDBC p = new EmpresaDaoJDBC();
                 p.adicionar(empresa);
-                CadastrarEmpresa.getCadastrarEmpresa().close();
+                CadastrarEmpresa.fecharTelaCadastrarEmpresa();
             }
             
             
         } catch (RuntimeException ex) {
-            Alert alert = new Alert(Alert.AlertType.ERROR);
-            alert.setContentText("Erro Inesperado Tente Novamente \nPreencha todos os campos");
-
-            alert.setTitle("Erro");
+            Alerts.showAlerts("ERRO", null,"Erro Tente Novamente", Alert.AlertType.ERROR);
         }
     }
 

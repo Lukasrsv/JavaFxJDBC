@@ -11,6 +11,7 @@ import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.stage.Stage;
 
+
 /**
  *
  * @author lukas
@@ -34,6 +35,22 @@ public class CadastrarPessoa extends Application{
 
     public  void setCadastrarPessoa(Stage CadastrarPessoa) {
        this.CadastrarPessoa = CadastrarPessoa;
+    }
+    
+    
+     public static void abrirTelaCadastrarPessoa(){
+        CadastrarPessoa cadastrarPessoa = new CadastrarPessoa();
+       try {
+           cadastrarPessoa.start(new Stage());
+       } 
+       catch (Exception ex) {
+          
+       }
+    
+    }
+     public static void fecharTelaCadastrarPessoa(){
+        CadastrarPessoa.close();
+    
     }
     
     

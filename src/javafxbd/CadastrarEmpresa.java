@@ -5,6 +5,8 @@
  */
 package javafxbd;
 
+import java.util.logging.Level;
+import java.util.logging.Logger;
 import javafx.application.Application;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Parent;
@@ -37,6 +39,21 @@ public class CadastrarEmpresa extends Application {
         this.CadastrarEmpresa = CadastrarEmpresa;
     }
 
+    public static void abrirTelaCadastrarEmpresa(){
+        CadastrarEmpresa cadastrarEmpresa = new CadastrarEmpresa();
+       try {
+           cadastrarEmpresa.start(new Stage());
+       } 
+       catch (Exception ex) {
+          
+       }
+    
+    }
+    
+    public static void fecharTelaCadastrarEmpresa(){
+        CadastrarEmpresa.close();
+    
+    }
     
     
     

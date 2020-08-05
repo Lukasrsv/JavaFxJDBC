@@ -29,6 +29,7 @@ import javafx.stage.Stage;
 import javafxbd.Loguin;
 import javafxbd.Principal;
 import model.Pessoa;
+import util.Alerts;
 
 /**
  * FXML Controller class
@@ -82,19 +83,15 @@ public class LoguinController implements Initializable {
 
                 if (a.getEmail().equals(txEmail.getText()) && a.getSenha().equals(txSenha.getText())) {
 
-                    Principal principal = new Principal();
-
-                    principal.start(new Stage());
-                    Loguin.getLoguin().close();
+                    Principal.abrirTelaPrincipal();
+                    Loguin.fecharTelaLoguin();
                     break;
                 }
             }
 
         } 
         catch (Exception ex) {
-            Alert alert = new Alert(Alert.AlertType.ERROR);
-            alert.setContentText("Erro Tente Novamente");
-            alert.setTitle("Erro");
+            Alerts.showAlerts("ERRO", null, "Tente Novamente", Alert.AlertType.ERROR);
         }
 
     }

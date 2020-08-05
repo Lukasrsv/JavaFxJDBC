@@ -6,6 +6,8 @@
 package javafxbd;
 
 import java.io.IOException;
+import java.util.logging.Level;
+import java.util.logging.Logger;
 import javafx.application.Application;
 import javafx.event.ActionEvent;
 import javafx.event.EventHandler;
@@ -41,9 +43,21 @@ public class Loguin extends Application {
         Loguin.loguin = loguin;
     }
 
+    public static void abrirTelaLogin(){
+    Loguin loguin = new Loguin();
+       try {
+           loguin.start(new Stage());
+       } 
+       catch (IOException ex) {
+           Logger.getLogger(Loguin.class.getName()).log(Level.SEVERE, null, ex);
+       }
     
     
+    }
     
+    public static void fecharTelaLoguin (){
+        Loguin.getLoguin().close();
+    }
     
     
     

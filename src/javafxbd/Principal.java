@@ -41,7 +41,21 @@ public  class Principal extends Application{
         this.principal = principal;
     }
     
+    public static void abrirTelaPrincipal(){
+     Principal principal = new Principal();
+
+        try {
+            principal.start(new Stage());
+        } 
+        catch (Exception ex) {
+            
+        }
+    }
     
+    public static void fecharTelaPrincipal(){
+        Principal.getPrincipal().close();
+    
+    }
    
     
      public static void main(String[] args) {
