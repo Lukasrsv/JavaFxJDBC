@@ -70,6 +70,14 @@ public class Empresa {
     }
 
     @Override
+    public String toString() {
+        return "Empresa{" + "nome=" + nome + ", cnpj=" + cnpj + ", email=" + email + ", senha=" + senha + '}';
+    }
+
+    
+    
+    
+    @Override
     public int hashCode() {
         int hash = 7;
         hash = 71 * hash + Objects.hashCode(this.nome);

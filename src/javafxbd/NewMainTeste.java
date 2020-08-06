@@ -66,10 +66,10 @@ public class NewMainTeste {
       
        */
       
-       PessoaDaoJDBC pessoaDaoJdbc1 = new PessoaDaoJDBC();
-       List <Pessoa> lista = new ArrayList();
+       EmpresaDaoJDBC pessoaDaoJdbc1 = new EmpresaDaoJDBC();
+       List <Empresa> lista = new ArrayList();
        lista = pessoaDaoJdbc1.Buscar();
-       System.out.println(lista.toString());
+        System.out.println(lista);
       
        
        

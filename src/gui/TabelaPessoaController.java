@@ -81,12 +81,9 @@ public class TabelaPessoaController implements Initializable {
     
     }
     
-    public static void abrirTabelaPessoa(){
-        TabelaPessoaController pessoa = new TabelaPessoaController();
-        pessoa.inicializarTabelaPessoa();
-        
     
-    }
+    
+   
     
 
     /**

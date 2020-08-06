@@ -5,6 +5,7 @@
  */
 package javafxbd;
 
+import gui.TabelaEmpresaController;
 import java.util.logging.Level;
 import java.util.logging.Logger;
 import javafx.application.Application;
@@ -21,11 +22,14 @@ public class TabelaEmpresa extends Application {
     public static Stage tabelaEmpresa;
     @Override
     public void start(Stage stage) throws Exception {
-            Parent parent = FXMLLoader.load(getClass().getResource("/gui/TabelaEmpresa.fxml"));//carrega fxml
+            FXMLLoader loader = new FXMLLoader(getClass().getResource("/gui/TabelaEmpresa.fxml"));//carrega fxml
+            Parent parent = loader.load();
             Scene scene = new Scene(parent);//insere fxml em uma cena
             stage.setScene(scene);//insere a cena em uma janela
             stage.setTitle("TabelaEmpresa");
             stage.show();//mostra a janela
+            //TabelaEmpresaController controler = loader.getController();
+          //  controler.carregarListaEmpresa1();
             setTabelaEmpresa(stage);
     }
 
@@ -47,7 +51,7 @@ public class TabelaEmpresa extends Application {
             empresa.start(new Stage());
         } 
         catch (Exception ex) {
-            Logger.getLogger(TabelaEmpresa.class.getName()).log(Level.SEVERE, null, ex);
+            
         }
         
        
