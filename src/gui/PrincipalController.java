@@ -17,6 +17,8 @@ import javafx.scene.control.MenuItem;
 import javafx.stage.Stage;
 import javafxbd.CadastrarEmpresa;
 import javafxbd.CadastrarPessoa;
+import javafxbd.TabelaEmpresa;
+import javafxbd.TabelaPessoa;
 
 /**
  * FXML Controller class
@@ -24,7 +26,8 @@ import javafxbd.CadastrarPessoa;
  * @author lukas
  */
 public class PrincipalController implements Initializable {
-     @FXML
+
+    @FXML
     private MenuBar menuBarraPrincipal;
 
     @FXML
@@ -41,51 +44,57 @@ public class PrincipalController implements Initializable {
 
     @FXML
     private MenuItem menuItenCadastrarEmpresa;
-    
+
     @FXML
     private MenuItem menuItenListarEmpresa;
-    CadastrarPessoa cadastrarPessoa = new CadastrarPessoa();
-    CadastrarEmpresa cadastrarEmpresa = new CadastrarEmpresa();
+    
    
-    public void menuCadastrarPessoaAction(){
-        
-         try {
-             cadastrarPessoa.start(new Stage());
-         } 
-         catch (Exception ex) {
-             
-         }
-    
+
+    public void menuCadastrarPessoaAction() {
+
+        try {
+            CadastrarPessoa.abrirTelaCadastrarPessoa();
+        } catch (Exception ex) {
+
+        }
+
     }
-    
-    public void menuCadastrarEmpresaAction(){
-        
-         try {
-             cadastrarEmpresa.start(new Stage());
-         } 
-         catch (Exception ex) {
-             
-         }
-         
-         
-    
+
+    public void menuCadastrarEmpresaAction() {
+
+        try {
+            CadastrarEmpresa.abrirTelaCadastrarEmpresa();
+        } catch (Exception ex) {
+        }
+
     }
-    
-    
-    
-    
-    
-    
-    
-    
-    /**
-     * Initializes the controller class.
-     * @param url
-     * @param rb
-     */
-    @Override
-    public void initialize(URL url, ResourceBundle rb) {
+
+    public void menuListarEmpresaAction() {
+        TabelaEmpresa.abrirTelaTabelaEmpresa();
+       
+    }
+
+    public void menuListarPessoaAction() {
+
+       TabelaPessoa.abrirTelaTabelaPessoa();
+       
+      
+    }
+
+
+
+/**
+ * Initializes the controller class.
+ *
+ * @param url
+ * @param rb
+ */
+@Override
+        public void initialize(URL url, ResourceBundle rb) {
         // TODO
     }    
     
 }
+
+
+

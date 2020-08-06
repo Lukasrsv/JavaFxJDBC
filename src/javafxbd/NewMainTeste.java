@@ -51,7 +51,7 @@ public class NewMainTeste {
         }
         */
       
-       
+       /*
         Pessoa pessoa = new Pessoa();
         pessoa.setId("02433631092");
         pessoa.setNome("Lukas");
@@ -64,14 +64,17 @@ public class NewMainTeste {
         // pessoaDaoJdbc.Atualizar(pessoa);
       //  pessoaDaoJdbc.Delete(pessoa);
       
-       
-      /*
+       */
+      
        PessoaDaoJDBC pessoaDaoJdbc1 = new PessoaDaoJDBC();
        List <Pessoa> lista = new ArrayList();
        lista = pessoaDaoJdbc1.Buscar();
        System.out.println(lista.toString());
-      */
       
+       
+       
+        /*
+       int teste = 0;
         EmpresaDaoJDBC busca = new EmpresaDaoJDBC();
         List<Empresa> lista = new ArrayList<>();
         lista = busca.Buscar();
@@ -85,19 +88,24 @@ public class NewMainTeste {
             
            if (a.getCnpj().equals(empresa.getCnpj()) ) {
                 System.out.println("usuário já existe");
-              
+                teste++;
+               
                Alert alert = new Alert(Alert.AlertType.INFORMATION);
-                alert.setTitle("Alerta");
+               alert.setTitle("Alerta");
                 alert.setContentText("Usuário já existe");
                 alert.show();
-       
-             }else{
+                
+             }
+           
+             if(teste == 0){
                EmpresaDaoJDBC p = new EmpresaDaoJDBC();
                p.adicionar(empresa);
                CadastrarEmpresa.getCadastrarEmpresa().close();
-           
-           }
+             }
+             
         }
+            */
+        
             
         
         
